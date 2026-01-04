@@ -8,55 +8,55 @@
 ## Phase 1: Setup
 **Goal**: Initialize the Python project structure and environment managed by `uv`.
 
-- [ ] T001 Initialize `uv` project and create directory structure (`src/model`, `src/service`, `src/ui`) in `pyproject.toml` and root
-- [ ] T002 Create empty `__init__.py` files in all subdirectories to make them Python packages
+- [x] T001 Initialize `uv` project and create directory structure (`src/model`, `src/service`, `src/ui`) in `pyproject.toml` and root
+- [x] T002 Create empty `__init__.py` files in all subdirectories to make them Python packages
 
 ## Phase 2: Foundational
 **Goal**: Implement the core data model and base service logic required for all user stories.
 
-- [ ] T003 Implement `TaskStatus` and `Priority` Enums in `src/model/task.py`
-- [ ] T004 Implement `Task` dataclass with `id`, `description`, `status`, and `priority` fields in `src/model/task.py`
-- [ ] T005 Create `TodoManager` class with empty `_tasks` list and `_next_id` counter in `src/service/todo_manager.py`
+- [x] T003 Implement `TaskStatus` and `Priority` Enums in `src/model/task.py`
+- [x] T004 Implement `Task` dataclass with `id`, `description`, `status`, and `priority` fields in `src/model/task.py`
+- [x] T005 Create `TodoManager` class with empty `_tasks` list and `_next_id` counter in `src/service/todo_manager.py`
 
 ## Phase 3: User Story 1 - Add & View Tasks (P1)
 **Goal**: Enable users to add new tasks and view the list of existing tasks.
 **Story**: [User Story 1 - Add & View Tasks](specs/001-todo-phase-1/spec.md#user-story-1---add--view-tasks-priority-p1)
 **Independent Test**: Launch app, add a task, verify it appears in list.
 
-- [ ] T006 [P] [US1] Create unit tests for `add_task` and `get_all_tasks` in `tests/test_todo_manager.py`
-- [ ] T007 [US1] Implement `add_task` method in `src/service/todo_manager.py` handling ID generation
-- [ ] T008 [US1] Implement `get_all_tasks` method in `src/service/todo_manager.py` returning list copy
-- [ ] T009 [US1] Implement `CLI` class with `run` loop and main menu display in `src/ui/cli.py`
-- [ ] T010 [US1] Implement "Add Task" menu handler in `src/ui/cli.py`
-- [ ] T011 [US1] Implement "View Tasks" menu handler in `src/ui/cli.py`
-- [ ] T012 [US1] Wire up `main.py` to instantiate `TodoManager` and start `CLI.run()`
+- [x] T006 [P] [US1] Create unit tests for `add_task` and `get_all_tasks` in `tests/test_todo_manager.py`
+- [x] T007 [US1] Implement `add_task` method in `src/service/todo_manager.py` handling ID generation
+- [x] T008 [US1] Implement `get_all_tasks` method in `src/service/todo_manager.py` returning list copy
+- [x] T009 [US1] Implement `CLI` class with `run` loop and main menu display in `src/ui/cli.py`
+- [x] T010 [US1] Implement "Add Task" menu handler in `src/ui/cli.py`
+- [x] T011 [US1] Implement "View Tasks" menu handler in `src/ui/cli.py`
+- [x] T012 [US1] Wire up `main.py` to instantiate `TodoManager` and start `CLI.run()`
 
 ## Phase 4: User Story 2 - Complete & Update Tasks (P2)
 **Goal**: Allow modifying task details and status.
 **Story**: [User Story 2 - Complete & Update Tasks](specs/001-todo-phase-1/spec.md#user-story-2---complete--update-tasks-priority-p2)
 **Independent Test**: Add task, update it, mark complete, verify changes.
 
-- [ ] T013 [P] [US2] Add unit tests for `update_task` logic in `tests/test_todo_manager.py`
-- [ ] T014 [US2] Implement `update_task` method (handling description/status updates) in `src/service/todo_manager.py`
-- [ ] T015 [US2] Implement "Update Task" menu handler with ID input validation in `src/ui/cli.py`
-- [ ] T016 [US2] Implement "Complete Task" menu handler (wrapping update_task) in `src/ui/cli.py`
+- [x] T013 [P] [US2] Add unit tests for `update_task` logic in `tests/test_todo_manager.py`
+- [x] T014 [US2] Implement `update_task` method (handling description/status updates) in `src/service/todo_manager.py`
+- [x] T015 [US2] Implement "Update Task" menu handler with ID input validation in `src/ui/cli.py`
+- [x] T016 [US2] Implement "Complete Task" menu handler (wrapping update_task) in `src/ui/cli.py`
 
 ## Phase 5: User Story 3 - Delete Tasks (P3)
 **Goal**: Enable removal of tasks.
 **Story**: [User Story 3 - Delete Tasks](specs/001-todo-phase-1/spec.md#user-story-3---delete-tasks-priority-p3)
 **Independent Test**: Add task, delete it, verify removal.
 
-- [ ] T017 [P] [US3] Add unit tests for `delete_task` in `tests/test_todo_manager.py`
-- [ ] T018 [US3] Implement `delete_task` method in `src/service/todo_manager.py`
-- [ ] T019 [US3] Implement "Delete Task" menu handler in `src/ui/cli.py`
+- [x] T017 [P] [US3] Add unit tests for `delete_task` in `tests/test_todo_manager.py`
+- [x] T018 [US3] Implement `delete_task` method in `src/service/todo_manager.py`
+- [x] T019 [US3] Implement "Delete Task" menu handler in `src/ui/cli.py`
 
 ## Phase 6: Polish & Cross-Cutting
 **Goal**: Finalize UX, error handling, and code quality.
 
-- [ ] T020 [P] Implement robust `try-except ValueError` blocks for all numeric inputs in `src/ui/cli.py`
-- [ ] T021 Run `mypy` and fix any strict type hinting errors across all files
-- [ ] T022 Manual verify: Application loop continues until explicit "Exit" command
-- [ ] T023 Manual verify: Application data resets (is empty) upon restart
+- [x] T020 [P] Implement robust `try-except ValueError` blocks for all numeric inputs in `src/ui/cli.py`
+- [x] T021 Run `mypy` and fix any strict type hinting errors across all files
+- [x] T022 Manual verify: Application loop continues until explicit "Exit" command
+- [x] T023 Manual verify: Application data resets (is empty) upon restart
 
 ## Dependencies
 
